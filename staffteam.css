@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    background: #080808;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.navbar {
+    background: #000;
+    padding: 20px;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.navbar a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a.active, .navbar a:hover {
+    color: #ff00ff;
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+.rgb-text {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move-rgb 4s linear infinite;
+}
+
+@keyframes move-rgb {
+    to { background-position: 200%; }
+}
+
+.staff-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.staff-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #222;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+}
+
+.avatar-container img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #222;
+    padding: 5px;
+}
+
+/* Estilos por Rango */
+.fundador { border-bottom: 4px solid #ff0000; }
+.fundador:hover { box-shadow: 0 0 25px rgba(255, 0, 0, 0.4); }
+.fundador .rank-badge { color: #ff4d4d; }
+
+.cofundador { border-bottom: 4px solid #00f2ff; }
+.cofundador:hover { box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); }
+.cofundador .rank-badge { color: #00f2ff; }
+
+.manager { border-bottom: 4px solid #bf00ff; }
+.manager:hover { box-shadow: 0 0 25px rgba(191, 0, 255, 0.4); }
+.manager .rank-badge { color: #df80ff; }
+
+.rank-badge {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}

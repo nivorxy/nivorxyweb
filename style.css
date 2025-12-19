@@ -1,0 +1,66 @@
+/* Configuración General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+/* Animación RGB para el Fondo o Bordes */
+@keyframes rgb-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navegación */
+nav {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    border-image-slice: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px #00f2ff;
+}
+
+/* Efecto RGB en Títulos y Contenedores */
+.rgb-text {
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    background-size: 300% 100%;
+    animation: rgb-gradient 5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-color: #00f2ff;
+}
