@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; background: linear-gradient(135deg, #2c2f33, #23272a);
+            color: #fff; overflow: hidden;
+        }
+        .container { text-align: center; animation: fadeIn 1.5s ease-in-out; }
+        h1 {
+            font-size: 3.5rem; margin-bottom: 20px; letter-spacing: 3px; text-transform: uppercase;
+            background: linear-gradient(90deg, #fff, #7289da, #99aab5, #fff);
+            -webkit-background-clip: text; color: transparent; animation: colorShift 3s ease infinite;
+            transition: transform 0.2s, letter-spacing 0.2s;
+        }
+        h1:hover { transform: scale(1.05); letter-spacing: 5px; }
+        p {
+            font-size: 1.5rem; color: rgba(255, 255, 255, 0.9);
+            animation: blink 1.5s step-start infinite; transition: transform 0.2s, color 0.2s;
+        }
+        p:hover { color: #7289da; transform: scale(1.1); }
+        
+        /* Discord Button */
+        .discord-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            margin-top: 20px; padding: 10px 20px; border: none; border-radius: 5px;
+            background-color: #7289da; color: #fff; font-size: 1.2rem; cursor: pointer;
+            text-decoration: none; transition: background-color 0.3s ease;
+        }
+        .discord-btn img {
+            width: 24px; height: 24px;
+        }
+        .discord-btn:hover {
+            background-color: #5a6fab;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+        @keyframes colorShift { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+        
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } p { font-size: 1.2rem; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Under Construction</h1>
+        <p>Come back later!</p>
+        <a href="https://builtbybit.com/members/d4niell.528871/" class="discord-btn">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png" alt="Discord Logo">
+            Join our Discord
+        </a>
+    </div>
+</body>
+</html>
