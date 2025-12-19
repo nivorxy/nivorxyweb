@@ -4,38 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivorxy | Noticias</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="noticias.css">
 </head>
 <body>
+    <!-- Fondo de partículas -->
+    <div id="particles"></div>
+    
+    <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="links">
-            <a href="index.html">Inicio</a>
-            <a href="noticias.html" class="active">Noticias</a>
-            <a href="staffteam.html">Staff</a>
-            <a href="mediateam.html">Media</a>
-            <a href="enproceso.html">Tienda</a>
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <a href="noticias.html" class="active"><i class="fas fa-newspaper"></i> Noticias</a>
+            <a href="staffteam.html"><i class="fas fa-users"></i> Staff</a>
+            <a href="mediateam.html"><i class="fas fa-photo-video"></i> Media</a>
+            <a href="enproceso.html"><i class="fas fa-store"></i> Tienda</a>
         </div>
     </nav>
 
     <div class="container">
-        <h1 class="rgb-text">NOTICIAS RECIENTES</h1>
+        <h1 class="section-title">NOTICIAS RECIENTES</h1>
+        <p class="subtitle">Mantente al día con las últimas actualizaciones de Nivorxy</p>
 
-        <div class="news-item">
-            <div class="status-tag">EN DESARROLLO</div>
-            <h2>¡Nivorxy está en proceso de creación!</h2>
-            <p class="date">Publicado el 18 de Diciembre, 2025</p>
-            
-            <div class="content">
-                <p>Estamos trabajando arduamente en la configuración de la Network para ofrecerles la mejor experiencia posible. Actualmente estamos afinando detalles en los modos de juego y la infraestructura del servidor.</p>
-                
-                <div class="recruitment-box">
-                    <h3>¡BUSCAMOS STAFF! ⚒️</h3>
+        <div class="news-grid">
+            <!-- Noticia Principal -->
+            <div class="news-item featured">
+                <div class="news-glow"></div>
+                <div class="status-tag">
+                    <i class="fas fa-code"></i> EN DESARROLLO
+                </div>
+                <div class="news-date">
+                    <i class="far fa-calendar"></i> 18 de Diciembre, 2025
+                </div>
+                <h2>¡Nivorxy está en proceso de creación!</h2>
+                <div class="news-content">
+                    <p>Estamos trabajando arduamente en la configuración de la Network para ofrecerles la mejor experiencia posible. Actualmente estamos afinando detalles en los modos de juego y la infraestructura del servidor.</p>
+                    
+                    <div class="featured-box">
+                        <div class="box-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Próximas Características</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Modo SkyWars con arenas únicas</li>
+                            <li><i class="fas fa-check-circle"></i> Sistema de rangos personalizados</li>
+                            <li><i class="fas fa-check-circle"></i> Tienda con cosméticos exclusivos</li>
+                            <li><i class="fas fa-check-circle"></i> Eventos semanales con premios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Noticia de Reclutamiento -->
+            <div class="news-item recruitment">
+                <div class="news-glow"></div>
+                <div class="status-tag">
+                    <i class="fas fa-users"></i> RECLUTAMIENTO
+                </div>
+                <div class="news-date">
+                    <i class="far fa-calendar"></i> 15 de Diciembre, 2025
+                </div>
+                <h2>¡Buscamos Staff! ⚒️</h2>
+                <div class="news-content">
                     <p>Si tienes experiencia en moderación, configuración de plugins o construcción, ¡esta es tu oportunidad! Buscamos personas comprometidas para unirse al equipo de Nivorxy.</p>
-                    <a href="#" class="btn-apply">Postularse ahora</a>
+                    
+                    <div class="recruitment-box">
+                        <div class="requirements">
+                            <h4><i class="fas fa-clipboard-list"></i> Requisitos:</h4>
+                            <ul>
+                                <li>+16 años de edad</li>
+                                <li>Experiencia previa en staff (deseable)</li>
+                                <li>Disponibilidad horaria</li>
+                                <li>Conocimientos técnicos (según el puesto)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="positions">
+                            <h4><i class="fas fa-briefcase"></i> Posiciones Disponibles:</h4>
+                            <div class="position-tags">
+                                <span class="tag">Moderador</span>
+                                <span class="tag">Builder</span>
+                                <span class="tag">Developer</span>
+                                <span class="tag">Helper</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn-apply">
+                            <i class="fas fa-paper-plane"></i> Postularse ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Noticia de Actualización -->
+            <div class="news-item update">
+                <div class="news-glow"></div>
+                <div class="status-tag">
+                    <i class="fas fa-sync-alt"></i> ACTUALIZACIÓN
+                </div>
+                <div class="news-date">
+                    <i class="far fa-calendar"></i> 10 de Diciembre, 2025
+                </div>
+                <h2>Nuevo Sistema de Economía</h2>
+                <div class="news-content">
+                    <p>Hemos implementado un sistema de economía completamente renovado con características únicas que harán tu experiencia más inmersiva.</p>
+                    
+                    <div class="update-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-coins"></i>
+                            <h5>Monedas Personalizadas</h5>
+                            <p>Sistema dual de monedas para mayor versatilidad</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-chart-line"></i>
+                            <h5>Mercado Dinámico</h5>
+                            <p>Precios que fluctúan según la oferta y demanda</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-gift"></i>
+                            <h5>Recompensas Diarias</h5>
+                            <p>Bonificaciones por login consecutivo</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
 
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h3><i class="fas fa-envelope"></i> ¡No te pierdas nada!</h3>
+            <p>Suscríbete para recibir las últimas noticias directamente en tu correo.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit">Suscribirse <i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="noticias.js"></script>
+</body>
 </html>
