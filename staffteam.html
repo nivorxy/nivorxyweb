@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivorxy | Staff Team</title>
     <link rel="stylesheet" href="staffteam.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Fondo de partículas -->
+    <canvas id="particles"></canvas>
+    
     <nav class="navbar">
         <div class="links">
             <a href="index.html">Inicio</a>
@@ -18,8 +23,8 @@
     </nav>
 
     <div class="container">
-        <h1 class="rgb-text">ADMINISTRACION</h1>
-        <p class="subtitle">Equipo de Administracion de la Network</p>
+        <h1 class="section-title">ADMINISTRACIÓN</h1>
+        <p class="subtitle">El equipo de administración que dirige y supervisa toda la network, asegurando una experiencia de juego excepcional para todos los jugadores.</p>
 
         <div class="staff-grid">
             <div class="staff-card fundador">
@@ -47,12 +52,10 @@
             </div>
         </div>
     </div>
-</body>
-     </nav>
 
     <div class="container">
-        <h1 class="rgb-text">EQUIPO DE DESARROLLO</h1>
-        <p class="subtitle">Equipo de Desarrollo de la Network</p>
+        <h1 class="section-title">EQUIPO DE DESARROLLO</h1>
+        <p class="subtitle">Los magos detrás del código, creando y manteniendo los sistemas y plugins que hacen única a nuestra network.</p>
 
         <div class="staff-grid">
             <div class="staff-card jefedeveloper">
@@ -62,12 +65,77 @@
                 <h3>EstivMC</h3>
                 <span class="rank-badge">Jefe Developer</span>
             </div>
-         
+        </div>
+    </div>
 
+    <script>
+        // Script para el fondo de partículas
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let particlesArray = [];
 
+        // Ajustar tamaño del canvas
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
+        // Clase para las partículas
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.color = `rgba(0, ${200 + Math.random() * 55}, ${100 + Math.random() * 100}, ${0.5 + Math.random() * 0.5})`;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                else if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                else if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
 
+        // Crear partículas
+        function initParticles() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.width * canvas.height) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
 
+        // Animar partículas
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
 
+        // Inicializar y animar
+        initParticles();
+        animateParticles();
 
-
+        // Recrear partículas al redimensionar
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+    </script>
+</body>
+</html>
