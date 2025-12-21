@@ -33,7 +33,7 @@ body {
         linear-gradient(to bottom, rgba(0, 30, 15, 0.2) 0%, rgba(0, 15, 7, 0.8) 100%);
 }
 
-/* Fondo de partículas */
+
 #particles {
     position: fixed;
     top: 0;
